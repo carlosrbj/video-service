@@ -1,7 +1,7 @@
 CREATE TABLE video (
   id BIGINT AUTO_INCREMENT NOT NULL,
    title VARCHAR(100) NULL,
-   `description` VARCHAR(200) NULL,
+   `description` VARCHAR(150) NULL,
    url VARCHAR(200) NULL,
    CONSTRAINT pk_video PRIMARY KEY (id)
 );

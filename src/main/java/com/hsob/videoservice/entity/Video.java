@@ -12,7 +12,6 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "video")
 @Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Video {
@@ -21,14 +20,22 @@ public class Video {
     private Long id;
     @NotBlank
     @Size(max=100)
+    @Setter
     private String title;
 
     @NotBlank
-    @Size(max=200)
+    @Size(max=150)
+    @Setter
     private String description;
 
     @NotBlank
     @Size(max=200)
+    @Setter
     private String url;
 
+    public Video(String title, String description, String url) {
+        this.title = title;
+        this.description = description;
+        this.url = url;
+    }
 }
